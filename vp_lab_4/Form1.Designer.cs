@@ -48,7 +48,7 @@
             this.buttonGetElement = new System.Windows.Forms.Button();
             this.textBoxN = new System.Windows.Forms.TextBox();
             this.groupBoxCount = new System.Windows.Forms.GroupBox();
-            this.buttonGenCount = new System.Windows.Forms.Button();
+            this.buttonGetCount = new System.Windows.Forms.Button();
             this.textBoxCount = new System.Windows.Forms.TextBox();
             this.groupBoxTypeDate.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -87,7 +87,7 @@
             this.groupBoxTypeDate.Controls.Add(this.radioButtonChar);
             this.groupBoxTypeDate.Location = new System.Drawing.Point(12, 95);
             this.groupBoxTypeDate.Name = "groupBoxTypeDate";
-            this.groupBoxTypeDate.Size = new System.Drawing.Size(121, 142);
+            this.groupBoxTypeDate.Size = new System.Drawing.Size(124, 142);
             this.groupBoxTypeDate.TabIndex = 9;
             this.groupBoxTypeDate.TabStop = false;
             this.groupBoxTypeDate.Text = "Тип данных";
@@ -246,6 +246,7 @@
             this.buttonGetElement.TabIndex = 13;
             this.buttonGetElement.Text = "Найти";
             this.buttonGetElement.UseVisualStyleBackColor = true;
+            this.buttonGetElement.Click += new System.EventHandler(this.buttonGetElement_Click);
             // 
             // textBoxN
             // 
@@ -256,7 +257,7 @@
             // 
             // groupBoxCount
             // 
-            this.groupBoxCount.Controls.Add(this.buttonGenCount);
+            this.groupBoxCount.Controls.Add(this.buttonGetCount);
             this.groupBoxCount.Controls.Add(this.textBoxCount);
             this.groupBoxCount.Enabled = false;
             this.groupBoxCount.Location = new System.Drawing.Point(142, 183);
@@ -266,14 +267,15 @@
             this.groupBoxCount.TabStop = false;
             this.groupBoxCount.Text = "Количество элементов в списке";
             // 
-            // buttonGenCount
+            // buttonGetCount
             // 
-            this.buttonGenCount.Location = new System.Drawing.Point(100, 20);
-            this.buttonGenCount.Name = "buttonGenCount";
-            this.buttonGenCount.Size = new System.Drawing.Size(94, 23);
-            this.buttonGenCount.TabIndex = 13;
-            this.buttonGenCount.Text = "Обновить";
-            this.buttonGenCount.UseVisualStyleBackColor = true;
+            this.buttonGetCount.Location = new System.Drawing.Point(100, 20);
+            this.buttonGetCount.Name = "buttonGetCount";
+            this.buttonGetCount.Size = new System.Drawing.Size(94, 23);
+            this.buttonGetCount.TabIndex = 13;
+            this.buttonGetCount.Text = "Обновить";
+            this.buttonGetCount.UseVisualStyleBackColor = true;
+            this.buttonGetCount.Click += new System.EventHandler(this.buttonGetCount_Click);
             // 
             // textBoxCount
             // 
@@ -289,7 +291,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(356, 250);
+            this.ClientSize = new System.Drawing.Size(353, 247);
             this.Controls.Add(this.groupBoxCount);
             this.Controls.Add(this.groupBoxGet);
             this.Controls.Add(this.groupBoxAddValue);
@@ -327,7 +329,7 @@
         private System.Windows.Forms.Button buttonGetElement;
         private System.Windows.Forms.TextBox textBoxN;
         private System.Windows.Forms.GroupBox groupBoxCount;
-        private System.Windows.Forms.Button buttonGenCount;
+        private System.Windows.Forms.Button buttonGetCount;
         private System.Windows.Forms.TextBox textBoxCount;
         private System.Windows.Forms.RadioButton radioButtonFloat;
         private System.Windows.Forms.RadioButton radioButtonInt;
