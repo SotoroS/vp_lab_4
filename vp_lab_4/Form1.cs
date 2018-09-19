@@ -16,5 +16,10 @@ namespace vp_lab_4
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
